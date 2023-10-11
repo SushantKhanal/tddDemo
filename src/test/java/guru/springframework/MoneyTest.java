@@ -16,20 +16,20 @@ public class MoneyTest {
         Dollar dollar1 = Money.dollar(5);
         assertEquals(dollar1, Money.dollar(5));
         assertNotEquals(dollar1, Money.dollar(10));
-        assertNotEquals(Money.dollar(5), new Franc(5));
+        assertNotEquals(Money.dollar(5), Money.franc(5));
     }
 
     @Test
     void testMultiplicationFranc() {
-        Franc five = new Franc(5);
-        assertEquals(new Franc(10), five.times(2));
-        assertEquals(new Franc(15), five.times(3));
+        Franc five = Money.franc(5);
+        assertEquals(Money.franc(10), five.times(2));
+        assertEquals(Money.franc(15), five.times(3));
     }
 
     @Test
     void testEqualityFranc() {
-        Franc franc1 = new Franc(5);
-        assertEquals(franc1, new Franc(5));
-        assertNotEquals(franc1, new Franc(10));
+        Franc franc1 = Money.franc(5);
+        assertEquals(franc1, Money.franc(5));
+        assertNotEquals(franc1, Money.franc(10));
     }
 }
