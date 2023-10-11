@@ -5,11 +5,13 @@ public abstract class Money {
 
     public abstract Money times(int Multiplier);
 
-    public static Dollar dollar(int amount) {
+    protected abstract String currency();
+
+    public static Money dollar(int amount) {
         return new Dollar(amount);
     }
 
-    public static Franc franc(int amount) {
+    public static Money franc(int amount) {
         return new Franc(amount);
     }
 
