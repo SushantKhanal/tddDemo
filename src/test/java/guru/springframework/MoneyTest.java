@@ -16,17 +16,11 @@ public class MoneyTest {
 
     @Test
     void testEqualityDollar() {
-        Money dollar1 = Money.dollar(5);
-        assertEquals(dollar1, Money.dollar(5));
-        assertNotEquals(dollar1, Money.dollar(10));
+        assertEquals(Money.dollar(5), Money.dollar(5));
+        assertNotEquals(Money.dollar(5), Money.dollar(10));
         assertNotEquals(Money.dollar(5), Money.franc(5));
-    }
-
-    @Test
-    void testEqualityFranc() {
-        Money franc1 = Money.franc(5);
-        assertEquals(franc1, Money.franc(5));
-        assertNotEquals(franc1, Money.franc(10));
+        assertEquals(Money.franc(5), Money.franc(5));
+        assertNotEquals(Money.franc(5), Money.franc(10));
     }
 
     @Test
